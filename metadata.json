@@ -1,0 +1,6 @@
+{
+  "name": "Land - Rural Utility Cost",
+  "description": "Rural land decision and valuation hub for farmland, acreage, and property planning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
