@@ -117,9 +117,11 @@ export default function App() {
         <div className="flex md:hidden items-center">
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 rounded-md text-[#7D6B5D] hover:bg-gray-100"
+            className="p-2 rounded-md text-[#7D6B5D] hover:bg-gray-100 min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-[#2A5A7A]/50"
+            aria-expanded={isMobileMenuOpen}
+            aria-label="Toggle navigation menu"
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMobileMenuOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
           </button>
         </div>
       </header>
