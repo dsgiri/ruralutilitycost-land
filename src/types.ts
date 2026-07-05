@@ -9,4 +9,5 @@ export type ViewState =
   | 'About'
   | 'Contact'
   | 'Legal'
-  | 'License';
+  | 'License'
+  | 'NotFound';

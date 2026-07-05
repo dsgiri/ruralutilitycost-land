@@ -39,17 +39,18 @@ export default function AppraisalPrep() {
 
       <div className="bg-white border border-[#E5E2DD] rounded-xl shadow-sm divide-y divide-[#E5E2DD] overflow-hidden">
         {tasks.map((task) => (
-          <label key={task.id} className="flex items-start p-4 hover:bg-[#F9F8F6] transition-colors cursor-pointer group">
-            <div className="flex items-center h-5 mt-0.5">
+          <label key={task.id} className="flex items-start p-4 hover:bg-[#F9F8F6] transition-colors cursor-pointer group min-h-[56px]">
+            <div className="flex items-center h-6 mt-0.5">
               <input
                 type="checkbox"
                 checked={task.done}
                 onChange={() => toggleTask(task.id)}
-                className="w-4 h-4 text-[#2A5A7A] border-[#E5E2DD] rounded focus:ring-[#2A5A7A] cursor-pointer accent-[#2A5A7A]"
+                className="w-5 h-5 text-[#2A5A7A] border-[#E5E2DD] rounded focus:ring-2 focus:ring-[#2A5A7A] cursor-pointer accent-[#2A5A7A] transition-all"
+                aria-label={`Mark task ${task.id} as done: ${task.text}`}
               />
             </div>
-            <div className="ml-3">
-              <span className={`text-sm font-medium transition-colors ${task.done ? 'text-[#7D6B5D] line-through opacity-70' : 'text-[#4B4B4B] group-hover:text-[#1A1A1A]'}`}>
+            <div className="ml-4 flex-1">
+              <span className={`text-sm md:text-base font-medium transition-colors ${task.done ? 'text-[#7D6B5D] line-through opacity-70' : 'text-[#4B4B4B] group-hover:text-[#1A1A1A]'}`}>
                 {task.text}
               </span>
             </div>
